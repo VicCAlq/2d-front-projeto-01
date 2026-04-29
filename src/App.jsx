@@ -1,34 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
+import { useState } from "react";
+import Cabecalho from './components/cabecalho'
+import Rodape from './components/rodape'
+import Botao from './components/botao'
 
-const estilo = {
-  botao: {
-    backgroundColor: "blue",
-    color: "white",
+const estilos={
+   botao: {
+    backgroundColor: "#248",
+    color: "#ddd",
+    borderRadius: "5px",
+    padding: "10px",
+    margin: "5px",
+    width: "150px",
+    height: "50px",
   }
 }
 
-function App() {
-  const [count, setCount] = useState(true)
+export default function App() {
+  const paginaInicial = <>
+    <h1>Vamos ver nosso códigos aqui</h1>
+    <p>Para Saber mais sobre os códigos escolhidos, clique nas fotos abaixo:</p>
+    <Botao texto="Clique aqui" estilo={estilos.botao}
+    
+    />
+  </>
+
+  const paginaEquipe = <>
+    <h1>Sobre a equipe em construção</h1>
+  </>
+
+  const [conteudo, setConteudo] = useState(paginaInicial)
 
   return (
     <>
-      <button 
-        onClick={() => setCount(!count)}
-        style={
-          {
-            ...estilo.botao,
-            backgroundColor: count ? "blue" : "green"
-          }
-        }
-      >
-        Me clique
-      </button>
+      <Cabecalho
+        paginaInicial={paginaInicial}
+        paginaEquipe={paginaEquipe}
+        mudarPagina={setConteudo}
+      />
+      {conteudo}
+
+      
+
+      <Rodape />
     </>
   )
 }
-
-export default App
