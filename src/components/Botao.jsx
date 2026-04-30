@@ -21,8 +21,8 @@ const estilos={
     
 }
    
-export default function Cards({
-    paginaPedroCod,mudarPaginaCod
+export default function Botao({
+    mudarPaginaCod
 }){
 
     return(<>

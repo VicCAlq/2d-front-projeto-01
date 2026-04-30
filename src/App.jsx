@@ -5,6 +5,8 @@ import Rodape from './components/Rodape'
 import Botao from './components/Botao'
 import Cards from './components/Cards'
 import Conteudo from './components/Conteudo'
+import Menu from './components/Menu'
+
 
 export default function App() {
 
@@ -21,7 +23,7 @@ export default function App() {
           <h1>Vamos ver nossos códigos aqui</h1>
           <p>Clique nas fotos abaixo:</p>
 
-          <Botao mudarPaginaCod={setPagina} />
+          <Menu mudarPaginaCod={setPagina} />
         </>
       )}
 
