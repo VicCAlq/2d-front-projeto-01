@@ -11,7 +11,7 @@ const estilos = {
   botao: {
     backgroundColor: "#248",
     color: "#ddd",
-    borderRadius: "5px",
+    borderRadius: "50px",
     padding: "10px",
     margin: "5px",
   }

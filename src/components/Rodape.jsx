@@ -5,7 +5,7 @@ const estilos ={
     margin: "20px 0px 0px 0px",
     backgroundColor: "#222",
     display: "flex",
-    flexDirection: "column", // 👈 isso resolve
+    flexDirection: "column", 
     justifyContent: "center",
     alignItems: "center",
     }

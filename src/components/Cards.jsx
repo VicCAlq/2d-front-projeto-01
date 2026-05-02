@@ -1,37 +1,59 @@
 import { useState } from "react";
-const estilos={
-    botao:{
-        backgroundColor: "#248",
-  color: "#ddd",
-  borderRadius: "1000px", 
-  padding: "10px",
-  width: "100%",
-  height: "50px"
-    }
- 
+
+const estilos = {
+  cabecalho: {
+    margin: "0px 0px 20px 0px",
+    backgroundColor: "#222",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  botao: {
+    backgroundColor: "#248",
+    color: "#ddd",
+    borderRadius: "200px",
+    padding: "10px",
+    margin: "5px",
+  }
 }
- const Codigos ={
-    pedro: "Código do Pedro",
-    yasmin: "Código da Yasmin",
-    miguel: "Código do Miguel",
-    tiago: "Código do Tiago",
-    michel: "Código do Michel"
- }
-export default function Cards({ nome, voltar }) {
-  return (
-    <div style={{
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "100vh"
-    }}>
-      <h1>Sobre o código do {nome}</h1>
-         <p>Aqui vai uma descrição do código escolhido pelo {nome}.</p>
-         <p>{Codigos[nome]}</p>
-      <button onClick={voltar} style={estilos.botao}>
-        Voltar
-      </button>
-    </div>
-  )
+
+export default function Cabecalho({
+ mudarPagina
+}) {
+  const [selecionado, setSelecionado] = useState("inicial")
+
+  return(<>
+    <header style={estilos.cabecalho}>
+      <button 
+        style={{
+            ...estilos.botao,
+            backgroundColor: selecionado === "inicial"
+            ? "#248"
+            : "#777"
+        }} 
+        onClick={() => {
+          setSelecionado("inicial")
+          mudarPagina("inicial")
+        }}
+      >Página inicial</button>
+      
+
+
+
+      <button
+        style={{
+            ...estilos.botao,
+            backgroundColor: selecionado === "equipe"
+            ? "#248"
+            : "#777"
+        }}  
+        
+       onClick={() => {
+        setSelecionado("equipe")
+        mudarPagina("equipe")
+      }}>Sobre a equipe</button>
+
+    
+    </header>
+  </>)
 }
