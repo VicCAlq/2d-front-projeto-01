@@ -34,7 +34,7 @@ export default function App() {
         </div>
       )}
 
-      {["pedro","yasmin","miguel","tiago","michel"].includes(pagina) && (
+      {["pedro","yasmin","miguel","thiago","michel"].includes(pagina) && (
         <Cards
           nome={pagina}
           voltar={() => setPagina("inicial")}
