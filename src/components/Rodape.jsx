@@ -20,7 +20,7 @@ export default function Rodape() {
                     Projeto de Front-end 1º Trimestre
                     </a></p>
                     <p style={{color:"gold"}}>Criado por: Pedro Benício, Miguel Angelo,
-            Michel Nascimento, <br/>Tiago de Oliveira, Yasmin Rocha</p>
+            Michel Nascimento, <br/>Thiago de Oliveira, Yasmin Rocha</p>
         </footer>
     </>)
 }

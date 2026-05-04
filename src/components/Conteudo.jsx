@@ -2,7 +2,7 @@ import { useState } from "react";
 import Pedro from "../assets/Pedro.png"; 
 import Yasmin from "../assets/Yasmin-removebg-preview.png"; 
 import Miguel from "../assets/Miguel-removebg-preview.png"; 
-import Tiago from "../assets/Tiago.png"; 
+import Thiago from "../assets/Thiago.png"; 
 
 const estilos = {
   container: {
@@ -63,9 +63,9 @@ const estilos = {
             
 
         <figure style={estilos.figure}>
-            <img src={Tiago} alt="imagem de Tiago" style={estilos.imagens}/>
+            <img src={Thiago} alt="imagem de Thiago" style={estilos.imagens}/>
             <figcaption style={estilos.texto}>
-                <h2>Tiago Oliveira</h2>
+                <h2>Thiago Oliveira</h2>
                 <p>Desenvolvedor Front-end</p>
                 <p>Responsável pela produção do Componente "Menu"</p>
             </figcaption> 
@@ -74,7 +74,7 @@ const estilos = {
                          
                          
         <figure style={estilos.figure}>
-            <img src="src/assets/michel.png" alt="imagem de yasmin" style={estilos.imagens}/>
+            <img src="src/assets/michel.png" alt="imagem de Michel" style={estilos.imagens}/>
             <figcaption style={estilos.texto}>
                 <h2>Michel Nacimento</h2>
                 <p>Desenvolvedor Front-end</p>

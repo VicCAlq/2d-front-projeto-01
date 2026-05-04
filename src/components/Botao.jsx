@@ -2,7 +2,7 @@ import { useState } from "react";
 import Pedro from "../assets/Pedro.png";
 import Yasmin from "../assets/Yasmin-removebg-preview.png";
 import Miguel from "../assets/Miguel-removebg-preview.png";
-import Tiago from "../assets/Tiago.png";
+import Thiago from "../assets/Thiago.png";
 
 const estilos={
     imagens:{
@@ -69,11 +69,11 @@ export default function Botao({
             <button style={estilos.botao}
             onClick={() => 
         
-             mudarPaginaCod("tiago") 
+             mudarPaginaCod("thiago") 
              
              }>
-                <img src={Tiago} alt="imagem de Tiago" style={estilos.imagens}/>
-                <figcaption><h2>Tiago Oliveira</h2></figcaption>
+                <img src={Thiago} alt="imagem de Thiago" style={estilos.imagens}/>
+                <figcaption><h2>Thiago Oliveira</h2></figcaption>
             </button>
         </figure>
 
