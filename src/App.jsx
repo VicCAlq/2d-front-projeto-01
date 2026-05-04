@@ -44,19 +44,19 @@ const estudantes = [
     id: 'joao',
     nome: 'João',
     avatar: joaoImg,
-    muitoFacil: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    muitoDificil: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    entendeu: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    naoAjudou: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    muitoFacil: 'let soma = 0 for (i = 0; i <= 100; i++) {soma += i}',
+    muitoDificil: 'let pedras = [] pedras.concat("quartzo", "basalto", "granito") pedras.reverse() pedras.push("calcário", "mármore", "mica") pedras.reverse()',
+    entendeu: 'let listaNova = [pedras.pop() pedras.pop() pedras.pop() pedras.pop() pedras.pop() pedras.pop()]',
+    naoAjudou: 'function dobro (n) {return n * n}',
   },
   {
     id: 'matheus',
     nome: 'Matheus',
     avatar: matheusImg,
-    muitoFacil: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    muitoDificil: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    entendeu: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    naoAjudou: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    muitoFacil: 'let cincoPatinhosForamPassear = true',
+    muitoDificil: 'let reversa = [] let acc1 = nomes.length - 1 while  (acc1 >= 0){acc--reversa.push(reversa[acc1])}',
+    entendeu: 'let nomeDaSuaEscola = ("ETE Cícero Días")',
+    naoAjudou: 'novaLista = [] for (let pets of petsExoticos){for (let letras of pets){if (letras == "r") {novaLista.push(pets)}}}',
   }
 ]
 
