@@ -251,7 +251,7 @@ export default function Cards({ nome, voltar }) {
     }}>
       <h1>Sobre o código do {nome}</h1>
          <p>Aqui vai uma descrição do código escolhido pelo {nome}:</p>
-         <p>{Codigos[nome]}</p>
+         {Codigos[nome]}
       <button onClick={voltar} style={estilos.botao}>
         Voltar
       </button> <br />
