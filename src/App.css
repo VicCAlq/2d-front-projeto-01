@@ -1,184 +1,264 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+/* TÍTULO */
+.conteudo h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #e2e8f0;
 }
 
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
+/* GRID */
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 40px;
 }
 
-#center {
+/* FOTO DO MEMBRO */
+.membro-foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid rgba(125, 211, 252, 0.5); /* Borda azul clara combinando com o tema */
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.4); /* Brilho neon suave */
+}
+
+/* CARD DO MEMBRO */
+.membro-card {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
+  align-items: center;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.2);
+  transition: 0.3s;
+}
+/* NOME */
+.membro-card h3 {
+  color: #7dd3fc;
+  margin-bottom: 10px;
 }
 
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
+/* FUNÇÃO */
+.membro-card p {
+  color: #ccc;
+  font-size: 14px;
 }
 
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
+/* RESET */
+* {
+  margin: 0;
   padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+body {
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+  background: #020617;
 }
 
-.ticks {
-  position: relative;
+/* FUNDO AURORA ANIMADO */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 70%, #ff7a3d, transparent 40%),
+              radial-gradient(circle at 70% 30%, #0ea5e9, transparent 40%),
+              radial-gradient(circle at 50% 50%, #1e3a8a, transparent 60%);
+  animation: aurora 12s infinite alternate;
+  z-index: 0;
+  filter: blur(80px);
+}
+
+@keyframes aurora {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-10%, -10%); }
+}
+
+/* LINHAS */
+body::after {
+  content: "";
+  position: fixed;
   width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(255,255,255,0.04) 0px,
+    rgba(255,255,255,0.04) 1px,
+    transparent 2px,
+    transparent 6px
+  );
+  z-index: 0;
+}
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
+/* CONTEÚDO NA FRENTE */
+#root {
+  position: relative;
+  z-index: 1;
+}
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  align-items: center;
+}
+
+header button {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.menu button {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu button:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+/* CARD */
+.card {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 60px rgba(14,165,233,0.3);
+
+  animation: fadeUp 0.6s ease;
+}
+
+/* ANIMAÇÃO DE ENTRADA */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #7dd3fc;
+}
+
+/* CÓDIGO ESTILO VS CODE */
+.card pre {
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: #e2e8f0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* SIMULA CORES DE CÓDIGO */
+.card pre span.keyword { color: #38bdf8; }
+.card pre span.string { color: #facc15; }
+.card pre span.number { color: #fb7185; }
+
+/* CONTEUDO */
+.conteudo {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.conteudo p {
+  color: #ccc;
+}
+
+/* RODAPÉ */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
+/* IMPORTA FONTE BONITA */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap');
+
+/* MENU */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+/* BOTÃO */
+.botao-aluno {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+
+  padding: 12px 20px;
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+
+  color: white;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* HOVER SUAVE */
+.botao-aluno:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+}
+
+/* OPCIONAL: BOTÃO ATIVO (muito bonito) */
+.botao-aluno.ativo {
+  background: rgba(14,165,233,0.3);
+  border: 1px solid #7dd3fc;
+  box-shadow: 0 0 20px rgba(14,165,233,0.5);
 }
