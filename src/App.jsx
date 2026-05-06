@@ -1,34 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
+import { useState } from "react";
+import Cabecalho from './components/Cabecalho'
+import PaginaPrincipal from './components/PaginaPrincipal'
+import PaginaEquipe from './components/PaginaEquipe'
 
-const estilo = {
-  botao: {
-    backgroundColor: "blue",
-    color: "white",
-  }
-}
-
-function App() {
-  const [count, setCount] = useState(true)
+export default function App() {
+  const [pagina, setPagina] = useState("principal")
 
   return (
     <>
-      <button 
-        onClick={() => setCount(!count)}
-        style={
-          {
-            ...estilo.botao,
-            backgroundColor: count ? "blue" : "green"
-          }
-        }
-      >
-        Me clique
-      </button>
+      <Cabecalho mudarPagina={setPagina} paginaAtual={pagina} />
+      {pagina === "principal" && <PaginaPrincipal />}
+      {pagina === "equipe" && <PaginaEquipe />}
     </>
   )
 }
-
-export default App
