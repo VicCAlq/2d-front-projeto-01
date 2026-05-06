@@ -338,11 +338,11 @@ export const membros = [
   {
     nome: "Maria Helena",
     emoji: "🌸",
-    contribuicao: "Programou o componente Conteudo e a página Sobre a Equipe.",
+    contribuicao: "Não ajudou em nada",
   },
   {
     nome: "Davi Emmanuel",
     emoji: "⚡",
-    contribuicao: "Criou o componente Rodape e organizou os dados dos alunos no arquivo de dados.",
+    contribuicao: "Criou o componente Rodape e organizou os dados dos alunos no arquivo de dados, Programou o componente Conteudo e a página Sobre a Equipe.",
   },
 ];
