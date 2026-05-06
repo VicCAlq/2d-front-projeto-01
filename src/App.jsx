@@ -1,34 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
+import { useState } from "react";
+import Cabecalho from './components/Cabecalho'
 
-const estilo = {
-  botao: {
-    backgroundColor: "blue",
-    color: "white",
-  }
-}
+export default function App() {
+  const paginaInicial = <>
+    <h1>Vamos criar nosso projeto aqui</h1>
+  </>
 
-function App() {
-  const [count, setCount] = useState(true)
+  const paginaEquipe = <>
+    <h3>Sobre a equipe em construção</h3>
+  </>
+
+  const [conteudo, setConteudo] = useState(paginaInicial)
 
   return (
     <>
-      <button 
-        onClick={() => setCount(!count)}
-        style={
-          {
-            ...estilo.botao,
-            backgroundColor: count ? "blue" : "green"
-          }
-        }
-      >
-        Me clique
-      </button>
+      <Cabecalho
+        paginaInicial={paginaInicial}
+        paginaEquipe={paginaEquipe}
+        mudarPagina={setConteudo}
+      />
+      {conteudo}
     </>
   )
 }
-
-export default App
