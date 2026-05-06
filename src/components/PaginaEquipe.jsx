@@ -39,7 +39,7 @@ const estilos = {
 const membros = [
   { nome: "Arthur",  descricao: " Forneceu os Códigos Das Atividades " },
   { nome: "Heytor",  descricao: " Menu / Página principal " },
-  { nome: "Imael",   descricao: " Lista De Códigos " },
+  { nome: "Imael",   descricao: " Página da Equipe " },
   { nome: "Sophia",  descricao: " Cards " },
 ]
 
